@@ -1,0 +1,144 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root{
+
+/*#colors*/
+--very-dark-grayish-blue: hsl(217, 19%, 35%);
+--desaturated-dark-blue: hsl(214, 17%, 51%);
+--grayish-blue: hsl(212, 23%, 69%);
+--light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+    /*- Font size: 13px
+    - Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+    - Weights: 500, 700*/
+}
+
+/*We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)*/
+body{
+    background-color: var(--light-grayish-blue);
+}
+.main{
+    margin: 7.4rem 2.4rem 7.4rem 2.4rem;
+}
+
+.card{
+    width: 32.7rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    background-color: white;
+}
+.card-image{
+    width:32.7rem ;
+    height:20rem;
+}
+.card-image>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit:cover;
+}
+.card-text{
+    padding: 0 3.5rem 0 3.5rem;
+}
+.card-title{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+}
+.card-description{
+    padding: 2rem 0 0 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--desaturated-dark-blue);
+    line-height: 2rem;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3.5rem 2rem 3.5rem;
+
+}
+
+.profile>img{
+    border-radius: 3rem;
+    width: 4rem;
+    height: 4rem;
+}
+.profile-name{
+    color: var(--very-dark-grayish-blue);
+    width: 13rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+.profile-name>span{
+    color:var(--grayish-blue)
+}
+.profile-links{
+    padding: 2rem;
+    background-color: var(--light-grayish-blue);
+    border-radius: 3rem;
+}
+
+@media screen and (min-width: 1440px) {
+    
+    .card{
+        width: 73rem;
+        height: 28rem;
+        flex-direction: row;
+    }
+    .card-image{
+        width: 30%;
+    } 
+    .card-contain{
+        width: 70%;
+    }
+    .card-image{
+        width: 40rem;
+        height: auto;
+    }
+    .card-image>img{
+        border-radius: 1rem 0 0 1rem;
+        object-fit: cover;
+    }
+    .card-text{
+        padding: 3.2rem 4rem 2rem 0.5rem;
+    }
+    .card-title{
+        font-size: 2rem;
+    }
+    .profile{
+        padding: inherit;
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .profile-name{
+        margin: 0 12rem 0 2rem;
+    }
+    .profile-name>span{
+        font-weight: 500;
+    }
+    .profile-links{
+        background: url("./images/icon-share.svg") no-repeat center center;
+        background-color: var(--light-grayish-blue);
+        padding: 1.5rem;
+    }
+    
+}
