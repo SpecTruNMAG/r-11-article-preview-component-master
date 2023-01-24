@@ -21,10 +21,17 @@ html {
 
 body {
     background-color: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .main {
     margin: 7.4rem 2.4rem 7.4rem 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -121,6 +128,20 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1440px;
+        height: 800px;
+    }
 
     .card {
         margin: auto;
