@@ -73,7 +73,9 @@ body {
     color: var(--desaturated-dark-blue);
     line-height: 2rem;
 }
-
+.card-contain{
+    position: relative;
+}
 .profile {
 
     display: flex;
@@ -108,12 +110,12 @@ body {
     padding: 1.5rem;
     margin-top: 1.5rem;
     z-index: 2;
+    border: none;
 }
 
-.share {
-
-    position: absolute;
+.share {   
     display: none;
+    position: absolute;
     background-color: var(--very-dark-grayish-blue);
     padding: 2rem;
     flex-direction: row;
@@ -122,7 +124,7 @@ body {
     color: var(--grayish-blue);
     letter-spacing: 0.5rem;
     border-radius: 0 0 1rem 1rem;
-    top: 515px;
+    top: 210px;
     width: 32.7rem;
 
 }
