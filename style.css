@@ -1,32 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
-
-:root{
-
-/*#colors*/
---very-dark-grayish-blue: hsl(217, 19%, 35%);
---desaturated-dark-blue: hsl(214, 17%, 51%);
---grayish-blue: hsl(212, 23%, 69%);
---light-grayish-blue: hsl(210, 46%, 95%);
+:root {
+    /*#colors*/
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
     font-family: 'Manrope', sans-serif;
 }
-body{
+
+body {
     background-color: var(--light-grayish-blue);
 }
-.main{
+
+.main {
     margin: 7.4rem 2.4rem 7.4rem 2.4rem;
 }
 
-.card{
+.card {
+    margin: auto;
     width: 32.7rem;
     border-radius: 1rem;
     display: flex;
@@ -34,25 +36,30 @@ body{
     gap: 3.5rem;
     background-color: white;
 }
-.card-image{
-    width:32.7rem ;
-    height:20rem;
+
+.card-image {
+    width: 32.7rem;
+    height: 20rem;
 }
-.card-image>img{
+
+.card-image>img {
     width: 100%;
     height: 100%;
     border-radius: 1rem 1rem 0 0;
-    object-fit:cover;
+    object-fit: cover;
 }
-.card-text{
+
+.card-text {
     padding: 0 3.5rem 0 3.5rem;
 }
-.card-title{
+
+.card-title {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--very-dark-grayish-blue);
 }
-.card-description{
+
+.card-description {
     padding: 2rem 0 0 0;
     font-size: 1.3rem;
     font-weight: 500;
@@ -60,37 +67,46 @@ body{
     line-height: 2rem;
 }
 
-.profile{
+.profile {
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 2rem  3.5rem 2rem 3.5rem;
+    padding: 2rem 3.5rem 2rem 3.5rem;
 }
-.profile>img{
+
+.profile>img {
     border-radius: 3rem;
     width: 4rem;
     height: 4rem;
 }
-.profile-name{
+
+.profile-name {
     color: var(--very-dark-grayish-blue);
     width: 13rem;
     font-size: 1.3rem;
     line-height: 2rem;
     margin: 0 3rem 0 2rem;
 }
-.profile-name>span{
-    color:var(--grayish-blue)
+
+.profile-name>span {
+    color: var(--grayish-blue)
 }
-.profile-links{
+
+.profile-links {
     background: url("./images/icon-share.svg") no-repeat center center;
     background-color: var(--light-grayish-blue);
     border-radius: 2rem;
     padding: 1.5rem;
+    margin-top: 1.5rem;
+    z-index: 2;
 }
-.share{
-    position: absolute;;
-    display:none;
+
+.share {
+
+    position: absolute;
+    display: none;
     background-color: var(--very-dark-grayish-blue);
     padding: 2rem;
     flex-direction: row;
@@ -99,69 +115,83 @@ body{
     color: var(--grayish-blue);
     letter-spacing: 0.5rem;
     border-radius: 0 0 1rem 1rem;
+    top: 515px;
+    width: 32.7rem;
+
 }
 
-@media screen and (min-width: 800px) {   
-  
-    .card{
+@media screen and (min-width: 800px) {
+
+    .card {
         margin: auto;
         width: 73rem;
         height: 28rem;
         flex-direction: row;
     }
-    .card-image{
+
+    .card-image {
         width: 30%;
-    } 
-    .card-contain{
+    }
+
+    .card-contain {
         width: 70%;
         position: relative;
     }
-    .card-image{
+
+    .card-image {
         width: 40rem;
         height: auto;
     }
-    .card-image>img{
+
+    .card-image>img {
         border-radius: 1rem 0 0 1rem;
         object-fit: cover;
     }
-    .card-text{
+
+    .card-text {
         padding: 3.2rem 4rem 2rem 0.5rem;
     }
-    .card-title{
+
+    .card-title {
         font-size: 2rem;
     }
-    .profile{
+
+    .profile {
         padding: inherit;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: flex-start;
     }
 
-    .profile-name{
+    .profile-name {
         margin: 0 12rem 0 2rem;
     }
-    .profile-name>span{
+
+    .profile-name>span {
         font-weight: 500;
     }
-    .profile-links{
+
+    .profile-links {
         padding: 1.7rem;
     }
-    .share{
+
+    .share {
+        width: 25rem;
         top: 130px;
         left: 195px;
         border-radius: 1rem;
-        padding: 2rem 4rem 1.5rem 4rem;
+        padding: 2rem 3rem 1.5rem 3rem;
     }
-  
-    .share-triangle{
+
+    .share-triangle {
         position: absolute;
         width: 0;
         height: 0;
         border-left: 13px solid transparent;
-        border-right: 13px solid transparent;        
-        border-top: 13px solid  var(--very-dark-grayish-blue);
+        border-right: 13px solid transparent;
+        border-top: 13px solid var(--very-dark-grayish-blue);
         left: 118px;
         top: 55px;
 
     }
-   
+
 }
