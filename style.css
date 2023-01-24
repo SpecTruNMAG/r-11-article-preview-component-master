@@ -18,16 +18,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Manrope', sans-serif;
-    /*- Font size: 13px
-    - Family: [Manrope](https://fonts.google.com/specimen/Manrope)
-    - Weights: 500, 700*/
 }
-
-/*We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)*/
 body{
     background-color: var(--light-grayish-blue);
 }
@@ -68,14 +59,14 @@ body{
     color: var(--desaturated-dark-blue);
     line-height: 2rem;
 }
+
 .profile{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 3.5rem 2rem 3.5rem;
-
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem  3.5rem 2rem 3.5rem;
 }
-
 .profile>img{
     border-radius: 3rem;
     width: 4rem;
@@ -86,19 +77,34 @@ body{
     width: 13rem;
     font-size: 1.3rem;
     line-height: 2rem;
+    margin: 0 3rem 0 2rem;
 }
 .profile-name>span{
     color:var(--grayish-blue)
 }
 .profile-links{
-    padding: 2rem;
+    background: url("./images/icon-share.svg") no-repeat center center;
     background-color: var(--light-grayish-blue);
-    border-radius: 3rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+.share{
+    position: absolute;;
+    display:none;
+    background-color: var(--very-dark-grayish-blue);
+    padding: 2rem;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.3rem;
+    color: var(--grayish-blue);
+    letter-spacing: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
 }
 
-@media screen and (min-width: 1440px) {
-    
+@media screen and (min-width: 800px) {   
+  
     .card{
+        margin: auto;
         width: 73rem;
         height: 28rem;
         flex-direction: row;
@@ -108,6 +114,7 @@ body{
     } 
     .card-contain{
         width: 70%;
+        position: relative;
     }
     .card-image{
         width: 40rem;
@@ -136,9 +143,25 @@ body{
         font-weight: 500;
     }
     .profile-links{
-        background: url("./images/icon-share.svg") no-repeat center center;
-        background-color: var(--light-grayish-blue);
-        padding: 1.5rem;
+        padding: 1.7rem;
     }
-    
+    .share{
+        top: 130px;
+        left: 195px;
+        border-radius: 1rem;
+        padding: 2rem 4rem 1.5rem 4rem;
+    }
+  
+    .share-triangle{
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;        
+        border-top: 13px solid  var(--very-dark-grayish-blue);
+        left: 118px;
+        top: 55px;
+
+    }
+   
 }
